@@ -10,8 +10,8 @@ Este proyecto está desarrollado por el equipo LosCazaDragones33.
 
 ## Clase "Employee"
 A simple vista, esta clase parece bastante sencilla y que no viola ningún principio SOLID, pero sí lo hace. El principio SOLID que no está cumpliendo es:
-Dependency Inversion/Injection - Inversión/Inyección de Dependencias
-¿Por qué? Porque esta clase no cuenta con constructor, y los constructores son una manera de inyectar dependencias (la otra forma es mediante parámetros) sin crear instancias de otros objetos en la clase. Esto, claramente afecta a otra clase hija (PartTimeEmployee), por lo que también se añadió un constructor allí.
+1. Dependency Inversion/Injection - Inversión/Inyección de Dependencias
+    ¿Por qué? Porque esta clase no cuenta con constructor, y los constructores son una manera de inyectar dependencias (la otra forma es mediante parámetros) sin crear instancias de otros objetos en la clase. Esto, claramente afecta a otra clase hija (PartTimeEmployee), por lo que también se añadió un constructor allí.
 
 ## Clase "ReportGenerator"
 Esta clase viola dos principios SOLID:
