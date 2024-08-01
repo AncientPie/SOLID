@@ -27,4 +27,5 @@ Esta clase no deja claro la fomra de expandirla, pues si se quiere agregar otro 
 ## Clase "SalaryCalculator"
 En esta clase se viola el siguiente principio SOlID:
 1. _Dependency Inversion/Injection - Inversión/Inyección de Dependencias_
+
 Similar a la clase Employee acá se añade un constructor para así emplear el principio de inversión/inyección de dependencias para evitar que se deba modificar ambos códigos teniendo en cuenta que se busca que los objetos sean creados para la clase y no que la clase sean quien vaya a crearlos evitando la violación de otros principios.
