@@ -1,7 +1,14 @@
 public class SalaryCalculator {
 
+
+    private EmployeeManager employeeManager;
+
+    public SalaryCalculator(EmployeeManager employeeManager) {
+        this.employeeManager = employeeManager;
+    }
+
     public double calculateSalary(String name) {
-        EmployeeManager employeeManager = new EmployeeManager();
         return employeeManager.calculateSalary(name);
     }
 }
+
