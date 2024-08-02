@@ -1,4 +1,4 @@
-public interface FileWriter {
+public interface FileOperations {
     void saveToFile(String name);
 
 }
