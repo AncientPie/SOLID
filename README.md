@@ -29,3 +29,20 @@ En esta clase se viola el siguiente principio SOlID:
 1. _Dependency Inversion/Injection - Inversión/Inyección de Dependencias_
 
 Similar a la clase Employee acá se añade un constructor para así emplear el principio de inversión/inyección de dependencias para evitar que se deba modificar ambos códigos teniendo en cuenta que se busca que los objetos sean creados para la clase y no que la clase sean quien vaya a crearlos evitando la violación de otros principios.
+
+## Interface "EmployeeOperations"
+Acá se viola el siguiente principio:
+1. _Interface Segregation - Segregación de Interfaces_
+Anteriormente, en el código se presentaban los métodos de "addEmployee", "removeEmployee", "calculateSalary" y "saveToFile". En ese caso se viola este principio debido a que, con relación a lo que dicta este mismo, dos de esos métodos ("calculateSalary" y "saveToFile") no concuerdan con el objetivo de manejo de empleados como se presenta en la clase EmployeeManager entonces no tiene sentido crear una interfaz general con métodos que difieren los unos con los otros, por lo tanto, lo correcto es crear interfaces distintas según el objetivo específico que quieran buscar. Por lo tanto, se crearon las siguientes interfaces: 
+- EmployeeOperations: Contiene los métodos "addEmployee" y "removeEmployee".
+- SalaryOperations: Contiene el método "calculateSalary".
+- FileOperations: Contiene el método "saveToFile".
+Por lo tanto, se cumple el principio teniendo en cuenta varía interfaces para un objetivo específico en específico cada una, dejando de lado el tener una general.
+
+## Clase "EmployeeManager"
+Se viola un principio el cual es:
+1. _Single Responsibility - Responsabilidad Única_
+Dado que este principio dicta que cada clase debe enfocarse en una única función en específica, sucede que teniendo en cuenta que se crearon interfaces específicas para cada función en ese caso se tienen ahora 3 clases que implementan de dichas interfaces para así garantizar que cada una cumpla una única responsabilidad propia del objetivo que busca. Dichas clases son:
+- EmployeeManager (implementa de EmployeeOperations).
+- SalaryManager (implementa de SalaryOperations).
+- FileManager (implementa de FileOperations).
