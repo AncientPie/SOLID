@@ -1,4 +1,4 @@
-public class FileManager implements FileWriter {
+public class FileManager implements FileOperations {
 
     @Override
     public void saveToFile(String name) {
