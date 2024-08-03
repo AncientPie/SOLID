@@ -25,7 +25,7 @@ Esta clase tiene varias responsabilidades que tienen que ver con generar un repo
 
 2. _Open/Closed Principle - Principio Abierto/Cerrado_
 
-Esta clase no deja claro la fomra de expandirla, pues si se quiere agregar otro tipo de formatos que no sea Excel o PDf, tocará crear una función nueva para cada uno, lo cual a largo plazo puede dejar el código con una cantidad de métodos exagerada para una úncia clase. Al dejar ReportGenerator como una interfaz y hacer que las distintas clases la implementen, es más fácil dividir cada proceso, pues lo único que tocaría hacer si se desea añadir otro formato, es crear una clase nueva que implemente ReportGenerator pero con su propia lógica. Esto es bueno para que sea mantenible a largo plazo.
+Esta clase no deja claro la forma de expandirla, pues si se quiere agregar otro tipo de formatos que no sea Excel o PDf, tocará crear una función nueva para cada uno, lo cual a largo plazo puede dejar el código con una cantidad de métodos exagerada para una úncia clase. Al dejar ReportGenerator como una interfaz y hacer que las distintas clases la implementen, es más fácil dividir cada proceso, pues lo único que tocaría hacer si se desea añadir otro formato, es crear una clase nueva que implemente ReportGenerator pero con su propia lógica. Esto es bueno para que sea mantenible a largo plazo.
 
 ## Clase "SalaryCalculator"
 En esta clase se viola el siguiente principio SOLID:
