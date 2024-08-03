@@ -12,9 +12,9 @@ Este proyecto está desarrollado por el equipo La Banda.
 Como primer aspecto a resaltar de esta clase, se hizo un cambio de clase a interfaz, esto debido a que no se esta heredando ningun comportamiento, por lo cual se prefirio utilizar interfaces.
 Al cambiar a interfaz, y teniendo en cuenta la clase "PartTimeEmployee" llego a la conclusion de que esta clase viola los principios de: 
 1. Liskov substitution principle
+
 Esto se debe a que al tener un error una excepcion, no puede seguir el comportamiento esperado de employee, y si se cambiaran, el funcionamiento se veria afectado.
 A su vez, se creo una clase llamada "FullTimeEmployee" y una interfaz llamada "NameEmployee", en la clase se llama al metodo "getName()" que se encuentra en la interfaz de "NameEmployee", esto con el fin de que no se ejecuten excepciones y que solo lo llamen las clases que en verdad necesiten este metodo, ayudando de esta manera al principio de Liskov.
-
    
 
 ## Clase "ReportGenerator"
@@ -36,6 +36,7 @@ Similar a la clase Employee acá se añade un constructor para así emplear el p
 ## Interface "EmployeeOperations"
 Acá se viola el siguiente principio:
 1. _Interface Segregation - Segregación de Interfaces_
+
 Anteriormente, en el código se presentaban los métodos de "addEmployee", "removeEmployee", "calculateSalary" y "saveToFile". En ese caso se viola este principio debido a que, con relación a lo que dicta este mismo, dos de esos métodos ("calculateSalary" y "saveToFile") no concuerdan con el objetivo de manejo de empleados como se presenta en la clase EmployeeManager entonces no tiene sentido crear una interfaz general con métodos que difieren los unos con los otros, por lo tanto, lo correcto es crear interfaces distintas según el objetivo específico que quieran buscar. Por lo tanto, se crearon las siguientes interfaces: 
 - EmployeeOperations: Contiene los métodos "addEmployee" y "removeEmployee".
 - SalaryOperations: Contiene el método "calculateSalary".
@@ -45,6 +46,7 @@ Por lo tanto, se cumple el principio teniendo en cuenta varía interfaces para u
 ## Clase "EmployeeManager"
 Se viola un principio el cual es:
 1. _Single Responsibility - Responsabilidad Única_
+
 Dado que este principio dicta que cada clase debe enfocarse en una única función en específica, sucede que teniendo en cuenta que se crearon interfaces específicas para cada función en ese caso se tienen ahora 3 clases que implementan de dichas interfaces para así garantizar que cada una cumpla una única responsabilidad propia del objetivo que busca. Dichas clases son:
 - EmployeeManager (implementa de EmployeeOperations).
 - SalaryManager (implementa de SalaryOperations).
