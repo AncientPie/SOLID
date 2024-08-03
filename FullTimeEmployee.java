@@ -1,4 +1,4 @@
-public class FullTimeEmployee implements Employee{
+public class FullTimeEmployee implements Employee, NameEmployee{
 
     String name;
     String departament;
