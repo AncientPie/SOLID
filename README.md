@@ -11,7 +11,7 @@ Este proyecto está desarrollado por el equipo La Banda.
 ## Clase "Employee" y "PartTimeEmployee"
 Como primer aspecto a resaltar de esta clase, se hizo un cambio de clase a interfaz, esto debido a que no se esta heredando ningun comportamiento, por lo cual se prefirio utilizar interfaces.
 Al cambiar a interfaz, y teniendo en cuenta la clase "PartTimeEmployee" llego a la conclusion de que esta clase viola los principios de: 
-1. Liskov substitution principle
+1. _Liskov Substitution - Sustitución de Liskov_
 
 Esto se debe a que al tener un error una excepcion, no puede seguir el comportamiento esperado de employee, y si se cambiaran, el funcionamiento se veria afectado.
 A su vez, se creo una clase llamada "FullTimeEmployee" y una interfaz llamada "NameEmployee", en la clase se llama al metodo "getName()" que se encuentra en la interfaz de "NameEmployee", esto con el fin de que no se ejecuten excepciones y que solo lo llamen las clases que en verdad necesiten este metodo, ayudando de esta manera al principio de Liskov.
