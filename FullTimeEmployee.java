@@ -1,9 +1,9 @@
-public class PartTimeEmployee implements Employee {
+public class FullTimeEmployee implements Employee{
 
     String name;
     String departament;
 
-    public PartTimeEmployee(String name, String department) {
+    public FullTimeEmployee(String name, String department) {
         this.name = name;
         this.departament = department;
     }
